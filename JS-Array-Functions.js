@@ -48,3 +48,30 @@ console.log(minifiedRecords)
 //4. Get array of all first names 
 const firstNames = characters.map((character) => character.name.split(' ')[0]);
 console.log(firstNames);
+
+//*** Reduce ****
+
+//1. Get total mass of all characters
+const totalMass = characters.reduce((acc, cur) => acc + parseInt(cur.mass), 0)
+console.log(totalMass)
+
+//2. Get total height of all characters 
+const totalHeight = characters.reduce((acc, cur) => acc + parseInt(cur.height), 0)
+console.log(totalHeight)
+
+//3. Get total number of characters by eye color
+const charactersByEyeColor = characters.reduce((acc, cur) =>{
+  const color = cur.eye_color
+  if(acc[color]){
+    acc[color]++;
+  }else{
+    acc[color] =1; 
+  }
+  
+  return acc; 
+}, {})
+
+console.log(charactersByEyeColor)
+
+// 4. Get total number of characters in all character names
+const totalNameCharacters = characters.reduce((acc, cur) => acc + cur.name.length, 0)
