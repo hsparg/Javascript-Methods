@@ -102,6 +102,8 @@ const byGender = characters.sort((a,b) => {
 }) 
 
 
+
+
 //***Filter***
 //************
 
