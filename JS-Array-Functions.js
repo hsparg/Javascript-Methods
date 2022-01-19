@@ -102,6 +102,22 @@ const byGender = characters.sort((a,b) => {
 }) 
 
 
+//***Filter***
+//************
+
+// 1.Get Characters with mass greater than 100
+const greater100Characters = characters.filter((character) => character.mass > 100)
+
+//2. Get Characters with height less than 200
+const shorterCharacter = characters.filter((character) => character.height < 200)
+
+//3. Get all male characters 
+const maleCharacters = characters.filter((character) => character.gender === "male")
+
+//4. Gell all female 
+const femaleCharacters = characters.filter((character) => character.gender === "female")
+
+
 
 
 //*** Every ****
